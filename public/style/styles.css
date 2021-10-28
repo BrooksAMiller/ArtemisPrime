@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;700&family=Nunito:wght@200;300;400;600;700;800;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+:root {
+  --primary-color: #252322;
+  --secondary-color: #e5e5e5;
+  --accent-color: #14213d;
+  --header-color: #fad496;
+  --text-color: #ffffff;
+}
+
+/*
+var(--primary-color)
+var(--secondary-color)
+var(--accent-color)
+var(--header-color)
+var(--text-color)
+*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 12vh;
+  width: 100%;
+  font-family: 'Nunito', sans-serif;
+}
+
+body header ul li {
+  list-style: none;
+}
+
+body header ul li a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+body header .current {
+  font-weight: 700;
+}
+
+body header a .logo {
+  padding: 0 1em;
+  height: 100%;
+  vertical-align: middle;
+}
+
+body header a:hover {
+  font-weight: 700;
+}
+
+body header #mobile-button-cta {
+  display: none;
+}
+
+body header nav {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body header nav #mobile-exit {
+  display: none;
+}
+
+body header nav ul li {
+  display: inline;
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+body header .contact-info {
+  font-size: smaller;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-right: 1em;
+}
+
+body section {
+  background-color: var(--accent-color);
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+body section .hero-section {
+  height: 100vh;
+}
+
+body section .hero-section .hero-img {
+  margin: 0;
+  width: 100%;
+}
+
+body section .hero-section h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 3em;
+  color: var(--header-color);
+}
+
+body section .hero-section p {
+  padding: 10px 80px;
+  text-align: center;
+  font-size: 1.25em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+body section .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  width: 100%;
+  height: 100%;
+  background-color: var(--text-color);
+}
+
+body section .form-container .contact-right {
+  width: 50%;
+  height: 100vh;
+}
+
+body section .form-container .contact-right iframe {
+  height: 100%;
+  width: 100%;
+}
+
+body section .form-container .contact-form {
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  margin: 0 50px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body section .form-container .contact-form input, body section .form-container .contact-form textarea {
+  width: 100%;
+  margin-top: 2rem;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: var(--text-color);
+}
+
+body section .form-container .contact-form .submit {
+  border: 1px solid black;
+  padding: 1rem;
+  text-align: center;
+  background-color: black;
+  color: #ffff;
+  cursor: pointer;
+}
+
+body section .form-container .contact-form .submit:hover {
+  opacity: 0.6;
+}
+
+body footer h4 {
+  color: var(--text-color);
+  padding-left: 20px;
+}
+
+@media only screen and (max-width: 850px) {
+  body header ul {
+    padding-right: 20px;
+  }
+  body header .contact-info {
+    display: none;
+  }
+  body section {
+    width: 100%;
+  }
+  body section .form-container {
+    display: block;
+  }
+  body section .form-container .contact-form {
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin: 0;
+  }
+  body section .form-container .contact-form input, body section .form-container .contact-form textarea {
+    width: 90vw;
+  }
+  body section .form-container .contact-right {
+    width: 100%;
+    height: 40vh;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .mobile-menu-exit {
+    float: right;
+    margin: .5em;
+    cursor: pointer;
+  }
+  header.menu-btn {
+    display: block;
+  }
+  nav {
+    position: fixed;
+    z-index: 999;
+    width: 30%;
+    right: 0;
+    top: 0;
+    background-color: var(--accent-color);
+    height: 100vh;
+    display: block;
+  }
+  nav ul.primary-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul.primary-nav li {
+    padding: 1em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
