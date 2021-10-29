@@ -3,12 +3,14 @@ const { request } = require('http');
 const app = express();
 const nodemailer = require("nodemailer");
 const { getMaxListeners } = require('process');
+require('dotenv').config();
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
+console.log(process.env.PASSWORD);
 
 //Middleware
 app.use(express.static('public'));
-app.use(express.json());
+app.use(express.json())
 
 app.get('/', (req, res) =>{
     //point this to home page and contact page
@@ -25,14 +27,14 @@ app.post('/', (req, res) => {
             //Change this email and password when going to live production
             user: 'helpdesk.artemisprime@gmail.com',
             //Store this in an environment variable when going to production
-            pass: 'Agape8246!'
+            pass: process.env.PASSWORD
         }
     })
 
     const mailOptions = {
         from: req.body.email,
         to: 'helpdesk.artemisprime@gmail.com',
-        subject: `Message from ${req.body.email}: ${req.body.subject}`,
+        subject: `Message from ${req.body.name} at email ${req.body.email}: ${req.body.subject}`,
         text: req.body.message
     }
 
@@ -42,7 +44,7 @@ app.post('/', (req, res) => {
             res.send('error');
         } else {
             console.log('Email sent: ' + info.response);
-            res.send('success');
+            res.send('success')
         }
     })
 })

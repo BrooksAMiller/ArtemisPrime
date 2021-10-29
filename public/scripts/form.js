@@ -1,6 +1,6 @@
 const contactForm = document.querySelector('.contact-form');
 
-let name = document.getElementById('name');
+let nameElement = document.getElementById('name');
 let email = document.getElementById('email');
 let subject = document.getElementById('subject');
 let message = document.getElementById('message');
@@ -10,7 +10,7 @@ contactForm.addEventListener('submit', (e)=>{
 
     //form data Javascript object
     let formData = {
-        name: name.value,
+        name: nameElement.value,
         email: email.value,
         subject: subject.value,
         message: message.value
@@ -21,14 +21,15 @@ contactForm.addEventListener('submit', (e)=>{
     let xhr = new XMLHttpRequest();
     xhr.open('POST', '/');
     xhr.setRequestHeader('content-type', 'application/json');
-    xhr.onload == function() {
+    xhr.onload = function() {
         console.log(xhr.responseText);
         //Alert front-end that the email was sumbitted successfully
         if(xhr.responseText == 'success'){
+            console.log("success")
             alert('Email sent');
 
             //clear form 
-            name.value = '';
+            nameElement.value = '';
             email.value = '';
             subject.value = '';
             message.value = '';

@@ -12,7 +12,7 @@
             <a href="./index.html">
                 <img src="../img/ArtemisLogo-final-white.svg" class="logo" alt="Artemis Prime Logo">
             </a>
-            <img id = "mobile-button-cta"	 class="mobile-menu" src="../img/Hamburger_button.svg" alt="Open Navigation" width="30px" height="30px">
+            <img id = "mobile-button-cta"	 class="mobile-menu" src="../img/Hamburger_button.svg" alt="Open Navigation">
             <nav>
                 <img id = "mobile-exit"	 class="mobile-menu-exit" src="../img/close_button.svg" alt="Close Navigation" width="30px" height="30px">
                 <ul  class="primary-nav">
@@ -25,31 +25,49 @@
 
             <div class="contact-info">
                 <ul>
-                    <li><a href="help@artemisprime.gr">Email: Help@ArtemisPrime.gr</a></li>
-                    <li><a href="help@artemisprime.gr">Phone: 555-555-5555</a></li>
+                    <li><a href="mailto:helpdesk.artemisprime@gmail.com">Email: Help@ArtemisPrime.gr</a></li>
+                    <li><a href="tel:302294086352">Phone: +3-022-908-6352</a></li>
                 </ul>
             </div>
         </header>
 
         <section>
             <div class="hero-section">
-                <img src="../img/1920x500.gif" alt="hero-img" class="hero-img">
+                <img src="../img/GreekSeaLandscape_edit.png" alt="hero-img" class="hero-img">
 
                 <h1>Find the Perfect Home</br> with Artemis Prime Real Estate.</h1>
 
-                <p>Artemis Prime Real Estates provides exceptional real estate services that work directly with individuals and professionals to find and purchase high quality homes available in Greece. 
-                    with our large network and certified agents we will ensure that you find the home of your dreams. 
+                <p>It is Artemis <strong>Prime</strong> Real Estate's purpose to ensure that you turn your real estate dreams into a reality. 
+                    We understand that property transactions are more than a business negotiation. 
+                    The homes that we choose will be the place that we build life long memories with family and friends.
+
+                    That is why nothing is more important to us than the needs and aspirations of our private and institutional clients.
                 </p>
+
+                <div class="about-us">
+                    <div class="about-left">
+                        <img src="../img/100X100.gif" alt="headshot">
+                        <h2>About Us!</h2>
+                        <p>Artemis <strong>Prime</strong> our team is our family</p>
+                    </div>
+                    <div class="about-right">
+                        <img src="../img/100X100.gif" alt="golden vsia">
+                        <h2>Golden Visa Opportunities</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            At fugiat repudiandae, labore enim laudantium mollitia veritatis voluptatum cupiditate 
+                            totam magni eligendi impedit placeat necessitatibus modi cumque explicabo assumenda laboriosam.</p>
+                    </div>
+                </div>
                 
             </div>
 
             <div class="form-container">
                 <form class="contact-form">
                     <h2>Contact</h2>
-                    <input type="text" id="name" placeholder="Full Name"></br>
-                    <input type="email" id="email" placeholder="Email"></br>
-                    <input type="text" id="subject" placeholder="Subject"></br>
-                    <textarea id="message" placeholder="Message" cols="30" rows="10"></textarea></br>
+                    <input type="text" id="name" placeholder="Full Name" required></br>
+                    <input type="email" id="email" placeholder="Email" required></br>
+                    <input type="text" id="subject" placeholder="Subject" required></br>
+                    <textarea id="message" placeholder="Message" cols="30" rows="10" required></textarea></br>
                     <input type="submit" class="submit" value="Send Message">
                 </form>
                 <div class="contact-right">
@@ -57,26 +75,32 @@
 				</div>
             </div>
         </section>
+
         <script src="../scripts/form.js"></script>
+
         <footer>
             <h4>© 2021 Artemis Prime Real Estate.</h4>
-
+            <div class="contact-info">
+                <ul>
+                    <li><a href="mailto:helpdesk.artemisprime@gmail.com">Email: Help@ArtemisPrime.gr</a></li>
+                    <li><a href="tel:302294086352">Phone: +3-022-908-6352</a></li>
+                </ul>
+            </div>
         </footer>
 
         <script>
-			
 			const mobileBtn = document.getElementById('mobile-button-cta')
 			const nav = document.querySelector('nav')
 			const mobileBtnExit = document.getElementById('mobile-exit');
 			
 			mobileBtn.addEventListener('click', () =>{
 				nav.classList.add('menu-btn');	
+                console.log("clicked mobile");
 			})
 			
 			mobileBtnExit.addEventListener('click', () =>{
 				nav.classList.remove('menu-btn');	
 			})
-			
 		</script>
     </body>
 </html>
