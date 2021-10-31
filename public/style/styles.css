@@ -41,6 +41,10 @@ body header {
   font-family: 'Nunito', sans-serif;
 }
 
+body header .hide {
+  display: none;
+}
+
 body header #mobile-button-cta {
   display: none;
 }
@@ -130,7 +134,6 @@ body section .hero-section .about-us {
   display: -ms-flexbox;
   display: flex;
   padding: 2em;
-  border-top: 1px solid white;
 }
 
 body section .hero-section .about-us img {
