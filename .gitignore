@@ -1,2 +1,4 @@
 .env
 private/
+server.js
+form.js
