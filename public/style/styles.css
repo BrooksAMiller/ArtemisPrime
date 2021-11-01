@@ -14,6 +14,10 @@ var(--accent-color)
 var(--header-color)
 var(--text-color)
 */
+.hide {
+  display: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -39,10 +43,6 @@ body header {
   height: 12vh;
   width: 100%;
   font-family: 'Nunito', sans-serif;
-}
-
-body header .hide {
-  display: none;
 }
 
 body header #mobile-button-cta {
@@ -133,31 +133,63 @@ body section .hero-section .about-us {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 2em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  padding-top: 2em;
+  width: 100%;
 }
 
 body section .hero-section .about-us img {
   max-width: 100%;
   max-height: 100%;
   width: 200px;
+  padding-top: 2em;
 }
 
 body section .hero-section .about-us h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2em;
-  color: var(--header-color);
+  color: var(--accent-color);
+}
+
+body section .hero-section .about-us h3 {
+  font-size: 1.25em;
 }
 
 body section .hero-section .about-us p {
-  padding: 1em 2em;
-}
-
-body section .hero-section .about-us .about-right {
+  color: var(--primary-color);
   padding: 0;
 }
 
+body section .hero-section .about-us .about-right {
+  background-color: #6C91C2;
+  padding: 0;
+  width: 100%;
+}
+
+body section .hero-section .about-us .about-right h2 {
+  color: var(--header-color);
+}
+
+body section .hero-section .about-us .about-right h3, body section .hero-section .about-us .about-right p {
+  color: var(--accent-color);
+}
+
+body section .hero-section .about-us .about-left {
+  background-color: var(--header-color);
+}
+
+body section .hero-section .about-us .about-left p {
+  padding: 0 2em;
+  padding-bottom: 2em;
+}
+
 body section .hero-section .about-us .about-left img {
-  border-radius: 50%;
+  padding-top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 body section .form-container {
