@@ -108,11 +108,19 @@ body section .hero-section {
 
 body section .hero-section .hero-img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
-body section .hero-section h1 {
+body section .hero-section #santorini_buildings {
+  width: 300px;
+  position: relative;
+  float: right;
+}
+
+body section .hero-section .hero-text {
+  padding-top: 1em;
+}
+
+body section .hero-section .hero-text h1 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
   text-align: center;
@@ -120,76 +128,141 @@ body section .hero-section h1 {
   color: var(--header-color);
 }
 
-body section .hero-section p {
-  padding: 10px 80px;
-  text-align: center;
-  font-size: 1.25em;
+body section .hero-section .hero-text p {
+  float: left;
+  padding: 0 80px;
+  text-align: left;
+  font-size: 1.5em;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 500;
   color: var(--text-color);
 }
 
-body section .hero-section .about-us {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+body section .about-us {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  padding-top: 2em;
-  width: 100%;
 }
 
-body section .hero-section .about-us img {
-  max-width: 100%;
-  max-height: 100%;
-  width: 200px;
-  padding-top: 2em;
-}
-
-body section .hero-section .about-us h2 {
+body section .about-us h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2em;
   color: var(--accent-color);
 }
 
-body section .hero-section .about-us h3 {
+body section .about-us h3 {
+  font-family: 'Nunito', sans-serif;
   font-size: 1.25em;
 }
 
-body section .hero-section .about-us p {
+body section .about-us p {
   color: var(--primary-color);
-  padding: 0;
 }
 
-body section .hero-section .about-us .about-right {
-  background-color: #6C91C2;
-  padding: 0;
+body section .about-us .golden-visa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #ffffff;
   width: 100%;
+  height: 100%;
+  min-width: 50%;
 }
 
-body section .hero-section .about-us .about-right h2 {
+body section .about-us .golden-visa #golden-visa-img {
+  width: 50%;
+}
+
+body section .about-us .golden-visa .golden-visa-text {
+  background-color: #00599b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+body section .about-us .golden-visa .golden-visa-text h2 {
+  background-color: #037ee8;
+  color: #ffce00;
+  padding: .25em .25em .25em .25em;
+  margin: 0;
+  font-size: 3.25em;
+}
+
+body section .about-us .golden-visa .golden-visa-text h3 {
+  color: var(--secondary-color);
+  margin: .5em;
+  font-size: 1.5em;
+}
+
+body section .about-us .golden-visa .golden-visa-text ul {
+  padding: 0;
+  margin: 0;
+}
+
+body section .about-us .golden-visa .golden-visa-text li {
   color: var(--header-color);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.1em;
+  margin: 0 2em 1em 2em;
+  text-align: start;
+  list-style: disc;
+  list-style-position: unset;
 }
 
-body section .hero-section .about-us .about-right h3, body section .hero-section .about-us .about-right p {
-  color: var(--accent-color);
+body section .about-us .golden-visa .golden-visa-text button {
+  border: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #e5e5e5;
+  background-color: #14213d;
+  border-radius: 12px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 10em;
+  height: 3em;
+  text-decoration: none;
+  margin: 1em;
 }
 
-body section .hero-section .about-us .about-left {
+body section .about-us .golden-visa .golden-visa-text button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body section .about-us .about-left {
   background-color: var(--header-color);
 }
 
-body section .hero-section .about-us .about-left p {
-  padding: 0 2em;
-  padding-bottom: 2em;
+body section .about-us .about-left h2 {
+  color: var(--accent-color);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3em;
 }
 
-body section .hero-section .about-us .about-left img {
+body section .about-us .about-left p {
+  font-size: 1.5em;
+  font-family: 'Nunito', sans-serif;
+  padding: 0 2em;
+  padding-bottom: 2em;
+  margin: 0;
+}
+
+body section .about-us .about-left img {
   padding-top: 0;
   width: 100%;
-  height: 100%;
 }
 
 body section .form-container {
@@ -265,6 +338,21 @@ body footer .contact-info {
   padding-right: 1em;
 }
 
+@media only screen and (max-width: 1075px) {
+  .golden-visa {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .golden-visa #golden-visa-img {
+    min-width: 100%;
+  }
+  .golden-visa .golden-visa-text {
+    min-width: 100%;
+  }
+}
+
 @media only screen and (max-width: 865px) {
   body header ul {
     padding-right: 20px;
@@ -276,10 +364,8 @@ body footer .contact-info {
     width: 100%;
   }
   body section .about-us {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    padding: 0;
+    margin: 0;
   }
   body section .form-container {
     display: block;
@@ -292,10 +378,6 @@ body footer .contact-info {
   }
   body section .form-container .contact-form input, body section .form-container .contact-form textarea {
     width: 90vw;
-  }
-  body section .form-container .contact-right {
-    width: 100%;
-    height: 40vh;
   }
   body footer .contact-info {
     display: -webkit-box;
