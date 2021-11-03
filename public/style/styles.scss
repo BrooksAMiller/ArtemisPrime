@@ -83,12 +83,77 @@ body {
                 }
             }
         }
-
         .contact-info {
             font-size: smaller;
             align-self: center;
             padding-right: 1em;
         }
+    }
+    .search-function {
+        background-color:#037ee8;
+        color: var(--text-color);
+        
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        font-size: 1.5em;
+        font-family: 'Nunito', sans-serif;
+        padding-bottom: 1em;
+        select{
+            height: 30px;
+            border-radius: 30px;
+        }
+        input{
+            height: 25px;
+            width: 150px;
+            border-radius: 30px;
+        }
+        ::-webkit-input-placeholder {
+            text-align: center;
+         }
+            .location-dropdown{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                //width: 100%;
+                label {
+                 padding-bottom: .25em;
+                }
+                    
+            }
+            .property-type-dropdown{
+                display: flex;
+                flex-direction: column;
+                //width: 100%;
+                label {
+                    padding-bottom: .2em;
+                   }
+            }
+            .price-range{
+                display: flex;
+                flex-flow: column;
+                //width: 100%;
+                align-items: center;
+                padding-top: 1em;
+                
+            }
+            .meter-range{
+                display: flex;
+                flex-flow: column;
+                //width: 100%;
+                align-items: center;
+                padding-top: .75em;
+                
+            }
+            .search-btn {
+                padding-top: 2em;
+                button {
+                    border-radius: 50px;
+                    min-height: 3em;
+                    min-width: 7em;
+                    
+                }
+            }
     }
 
     section {
@@ -96,6 +161,21 @@ body {
         display: block;
         margin: 0;
         width: 100%;
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            text-align: center;
+            font-size: 3em;
+            color: var(--header-color);
+            margin: 0;
+        }
+        p {
+            color:var(--text-color);
+            font-size: 1.3em;
+            text-align: center;
+            font-family: 'Nunito', sans-serif;
+        }
 
         .hero-section {
             height: 100%;
@@ -114,13 +194,6 @@ body {
             .hero-text {
                 padding-top: 1em;
                 
-                h1 {
-                    font-family: 'Cormorant Garamond', serif;
-                    font-weight: 700;
-                    text-align: center;
-                    font-size: 3em;
-                    color: var(--header-color);
-                }
                 p{
                     float: left;
                     padding: 0 80px;
@@ -131,7 +204,6 @@ body {
                     color: var(--text-color);
                 }
             }
-            
         }
 
             .about-us{
