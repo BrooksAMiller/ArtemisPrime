@@ -344,6 +344,7 @@ body section .about-us .golden-visa .golden-visa-text button {
   height: 3em;
   text-decoration: none;
   margin: 1em;
+  cursor: pointer;
 }
 
 body section .about-us .golden-visa .golden-visa-text button:hover {
