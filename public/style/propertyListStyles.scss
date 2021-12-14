@@ -1,0 +1,111 @@
+:root {
+    --primary-color: #252322;
+    --secondary-color: #e5e5e5;
+    --accent-color: #14213d;
+    --header-color: #fad496;
+    --text-color: #ffffff;
+    --blue-color: #037ee8;
+}
+/*
+var(--primary-color)
+var(--secondary-color)
+var(--accent-color)
+var(--header-color)
+var(--text-color)
+var(--blue-color)
+*/
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    .property-listings{
+        display: flex;
+        flex-direction: row;
+        .search-container{
+            width: 33%;
+            background-color: var(--accent-color);
+            height: 150vh;
+            
+            h1 {
+                padding-top: 1em;
+            }
+        }
+        .display-property-container{
+            width: 67%;
+            height: 150vh;
+            background-color: var(--blue-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: scroll;
+            
+            .card-template {
+                background-color: #e5e5e5;
+                max-width: 95%;
+                max-height: 25%;
+                border-radius: 15px;
+                margin-top: 1em;
+                display: flex;
+                flex-direction: row;
+                
+                img{
+                    border-radius: 15px 0 0 15px;
+                    max-width: 30%;
+                    padding-right: 1em;
+                }
+                .property-info{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    h2{
+                        text-align: center;
+                        font-size: 2vw;
+                        margin: 0;
+                        padding: .25em 0;
+                    }
+                    
+                    .info-grid{
+                        display: grid;
+                        align-content: center;
+                        grid-template-columns: auto auto;
+                        padding: .25em 0;
+                        div{
+                            text-align: center;
+                            display: inline;
+                            h3{
+                                margin: 0;
+                                padding-bottom: .5em;
+                                font-size: 1vw;
+                            }
+                            p{
+                                margin: 0;
+                                padding-bottom: 1em;
+                                color: #037ee8;
+                                font-size: 1vw;
+                                
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            .card-template:hover{
+                transform: scale(1.01);
+            }
+
+            
+    }
+    .display-property-container::-webkit-scrollbar {
+        display: none;
+      }
+      
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .display-property-container {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+}
+}
+
+

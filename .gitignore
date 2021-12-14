@@ -3,3 +3,4 @@ private/
 server.js
 form.js
 workspace.code-workspace
+public/scripts/dataBaseConnection.php
